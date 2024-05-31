@@ -1,20 +1,23 @@
 package UF4;
 
+import java.util.Scanner;
+
 public class Main {
+
 	public static void main(String[] args) {
-		String cadena = "Hola ";
-		int veces = 3;
 
-		String resultado = repetirCadena(cadena, veces);
-		System.out.println("Resultado: " + resultado);
-	}
+		Scanner teclado = new Scanner(System.in);
 
-	public static String repetirCadena(String cadena, int veces) {
-		StringBuilder resultado = new StringBuilder();
+		System.out.println("Inserta el texto que deseas repetir:");
+		String texto = teclado.nextLine();
+
+		System.out.println("Inserta el número de veces que deseas repetir el texto:");
+		int veces = teclado.nextInt();
+
 		for (int i = 0; i < veces; i++) {
-			resultado.append(cadena);
+			System.out.println(texto);
 		}
-		return resultado.toString();
+
 	}
 
 }
